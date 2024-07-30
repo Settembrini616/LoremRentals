@@ -1,0 +1,25 @@
+.mainMenu{
+    background-color: rgba(255, 255, 255, 0.6);
+    grid-row: navStart/navEnd;
+    grid-column: columnsStart/columnsEnd;
+    z-index: 3;
+    position: relative;
+
+    &__container{
+        list-style: none;
+        text-transform: uppercase;
+        display: flex;
+        gap: 5rem;
+    }
+
+    &__item{
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+
+
+
+}

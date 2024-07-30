@@ -1,11 +1,63 @@
-* {
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.main {
-  border: 2px solid red;
-  width: 10rem;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  background-color: #eee;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-rows: [navStart] 12rem [navEnd videoStart] calc(100vh - 12rem) [videoEnd];
+  grid-template-columns: [columnsStart] 1fr repeat(4, max-content) 1fr [columnsEnd];
+}
+
+.mainMenu {
+  background-color: rgba(255, 255, 255, 0.6);
+  grid-row: navStart/navEnd;
+  grid-column: columnsStart/columnsEnd;
+  z-index: 3;
+  position: relative;
+}
+.mainMenu__container {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  gap: 5rem;
+}
+.mainMenu__item a {
+  text-decoration: none;
+}
+
+.heroVideo {
+  grid-row: navStart/videoEnd;
+  grid-column: columnsStart/columnsEnd;
+  z-index: 1;
+  position: relative;
+}
+.heroVideo__inner {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=main.css.map */
