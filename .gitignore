@@ -1,13 +1,6 @@
 # Node modules
 node_modules/
 
-# Sass cache files
-.sass-cache/
-*.scssc
-
-# Compiled CSS
-*.css.map
-*.css
 
 # Logs
 logs
