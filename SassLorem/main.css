@@ -39,14 +39,53 @@ body {
   z-index: 3;
   position: relative;
 }
-.mainMenu__container {
-  list-style: none;
-  text-transform: uppercase;
+.mainMenu .nav {
   display: flex;
-  gap: 5rem;
+  justify-content: start;
+  height: 100%;
 }
-.mainMenu__item a {
-  text-decoration: none;
+.mainMenu .nav__left {
+  flex: 0 0 60%;
+  border: 2px solid green;
+  height: inherit;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.mainMenu .nav__left--wrapper {
+  height: 80%;
+  width: 25%;
+  min-width: 20rem;
+  margin-left: 2rem;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-template-rows: 30% 30%;
+  justify-content: start;
+  align-content: center;
+}
+.mainMenu .nav__left--wrapper-img {
+  height: 8rem;
+  width: 10rem;
+  grid-row: 1/span 3;
+  margin-left: 1rem;
+}
+.mainMenu .nav__left--wrapper-bigText {
+  text-transform: uppercase;
+  min-height: 2rem;
+  text-align: end;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  font-weight: 800;
+}
+.mainMenu .nav__left--wrapper-smallText {
+  min-height: 2rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.mainMenu .nav__right {
+  flex: 0 0 40%;
+  height: inherit;
+  border: 2px solid blue;
 }
 
 .heroVideo {

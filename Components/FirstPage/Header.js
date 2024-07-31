@@ -6,23 +6,31 @@ function initializeHeader(){
 
     if(mainMenu){
         const navbarHTML =`
-        <ul class="mainMenu__container">
-            <li class="mainMenu__item mainMenu__item--1">
-                <a href="" class="mainMenu__link--1">Home</a>
-            </li>
-            <li class="mainMenu__item mainMenu__item--2">
-                <a href="" class="mainMenu__link--2">Services</a>
-            </li>
-            <li class="mainMenu__item mainMenu__item--3">
-                <a href="" class="mainMenu__link--3">About</a>
-            </li>
-            <li class="mainMenu__item mainMenu__item--4">
-                <a href="" class="mainMenu__link--4">Contact</a>
-            </li>
-            <li class="mainMenu__item mainMenu__item--5">
-                <a href="" class="mainMenu__link--5">Extra</a>
-            </li>
-    </ul>
+        <div class="nav">
+        <div class="nav__left">
+        <div class="nav__left--wrapper">
+
+        <img src="/Assets/img/LoremLogo.png" 
+        alt="logo image" 
+        class="nav__left--wrapper-img">
+
+        
+        <p class="nav__left--wrapper-bigText">
+            Lorem Rentals Inc
+        </p>
+
+        <p class="nav__left--wrapper-smallText">
+        Groups
+        </p>
+    
+        </div>
+           
+        </div>
+
+            <div class="nav__right">
+            SOMETHING
+            </div>
+         </div>
         `;
 
         mainMenu.innerHTML = navbarHTML;

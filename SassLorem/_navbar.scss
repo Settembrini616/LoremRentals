@@ -5,21 +5,81 @@
     z-index: 3;
     position: relative;
 
-    &__container{
-        list-style: none;
-        text-transform: uppercase;
+    .nav{
         display: flex;
-        gap: 5rem;
-    }
+        justify-content: start;
+        height: 100%;
 
-    &__item{
+        &__left{
 
-        a{
-            text-decoration: none;
+            flex: 0 0 60%;
+            border: 2px solid green;
+            height: inherit;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            
+
+            &--wrapper{
+
+                height: 80%;
+                width: 25%;
+                min-width: 20rem;
+                margin-left: 2rem;
+
+                display: grid;
+                grid-template-columns: min-content max-content;
+                grid-template-rows: 30% 30%;
+                justify-content: start;
+                align-content: center;
+                
+
+                &-img{
+
+                height: 8rem;
+                width: 10rem;
+             
+                grid-row: 1/span 3;
+                margin-left: 1rem;
+
+                }
+
+
+                &-bigText{
+
+         
+                    text-transform: uppercase;
+                    min-height: 2rem;
+                    text-align: end;
+                    font-size: 2.5rem;
+                    margin-top: 1rem;
+                    font-weight: 800;
+                    
+
+                }
+
+                &-smallText{
+
+                    min-height: 2rem;
+                
+                    margin-top: 1rem;
+                    font-size: 2rem;
+                }
+            
+            }
+
+            
+
+        
         }
+        &__right{
+
+            flex: 0 0 40%;
+            height: inherit;
+            border: 2px solid blue;
+        }
+
+       
+
     }
-
-
-
-
 }
