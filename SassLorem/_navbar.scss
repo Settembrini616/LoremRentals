@@ -12,7 +12,7 @@
 
         &__left{
 
-            flex: 0 0 60%;
+            flex: 0 0 45%;
             border: 2px solid green;
             height: inherit;
             display: flex;
@@ -32,6 +32,7 @@
                 grid-template-rows: 30% 30%;
                 justify-content: start;
                 align-content: center;
+                border: 2px solid green;
                 
 
                 &-img{
@@ -47,14 +48,12 @@
 
                 &-bigText{
 
-         
                     text-transform: uppercase;
                     min-height: 2rem;
                     text-align: end;
                     font-size: 2.5rem;
                     margin-top: 1rem;
                     font-weight: 800;
-                    
 
                 }
 
@@ -72,11 +71,69 @@
 
         
         }
+
         &__right{
 
-            flex: 0 0 40%;
+            flex: 0 0 55%;
             height: inherit;
-            border: 2px solid blue;
+
+            display: grid;
+            grid-template-rows: min-content min-content;
+            align-content: end;
+          
+
+            
+
+            &--top{
+
+                border: 2px solid red;
+                display: flex;
+
+                >div:nth-of-type(1){
+                    flex: 0 0 40%;
+                }
+
+                &-content{
+                    flex: 0 0 40%;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    list-style: none;
+                    border-left: 2px solid black;
+
+                    >:nth-child(-n+2){
+                        border-right: 2px solid grey;
+                    }
+
+                    li{
+                        padding: .3rem 1rem 0 1rem;
+                        border: 2px solid navajowhite;
+
+                    }
+                }
+
+            }
+
+            &--bottom{
+                
+                border: 2px solid blue;
+
+            
+
+                &-list{
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid yellowgreen;
+                    padding: 2rem 1rem .5rem 1rem;
+                    
+                }
+            }
+
+
         }
 
        
