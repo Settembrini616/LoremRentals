@@ -46,7 +46,6 @@ body {
 }
 .mainMenu .nav__left {
   flex: 0 0 45%;
-  border: 2px solid green;
   height: inherit;
   display: flex;
   justify-content: start;
@@ -62,7 +61,6 @@ body {
   grid-template-rows: 30% 30%;
   justify-content: start;
   align-content: center;
-  border: 2px solid green;
 }
 .mainMenu .nav__left--wrapper-img {
   height: 8rem;
@@ -91,29 +89,75 @@ body {
   align-content: end;
 }
 .mainMenu .nav__right--top {
-  border: 2px solid red;
   display: flex;
 }
 .mainMenu .nav__right--top > div:nth-of-type(1) {
-  flex: 0 0 40%;
+  flex: 0 0 30%;
 }
 .mainMenu .nav__right--top-content {
-  flex: 0 0 40%;
+  flex: 0 0 70%;
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  justify-content: end;
   list-style: none;
-  border-left: 2px solid black;
 }
 .mainMenu .nav__right--top-content > :nth-child(-n+2) {
   border-right: 2px solid grey;
 }
 .mainMenu .nav__right--top-content li {
   padding: 0.3rem 1rem 0 1rem;
-  border: 2px solid navajowhite;
+  margin-right: 2rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
-.mainMenu .nav__right--bottom {
-  border: 2px solid blue;
+.mainMenu .nav__right--top-content li:nth-of-type(1) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 0.3rem;
+  margin-right: 0 !important;
+  cursor: pointer;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(1):hover > :first-child {
+  transform: scale(1.4) rotate(-45deg);
+  position: relative;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(1) > :first-child {
+  transition: all 0.3s linear;
+  position: relative;
+  top: 0.2rem;
+  left: 0.2rem;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(1) > :first-child svg {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(1) > :nth-child(2) {
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(2) {
+  display: flex;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(2) [class^=social__] {
+  height: 2rem;
+  width: 2rem;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(3) {
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 1.6rem;
+}
+.mainMenu .nav__right--top-content > :last-child {
+  text-align: center;
+}
+.mainMenu .nav__right--top-content > :last-child svg {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 .mainMenu .nav__right--bottom-list {
   list-style: none;
@@ -122,7 +166,6 @@ body {
   gap: 1rem;
   height: 100%;
   width: 100%;
-  border: 2px solid yellowgreen;
   padding: 2rem 1rem 0.5rem 1rem;
 }
 

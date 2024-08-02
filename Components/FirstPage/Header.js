@@ -34,10 +34,55 @@ function initializeHeader(){
             <div>&nbsp;</div>
            
             <ul class="nav__right--top-content">
-                <li class="nav__right--top-content_promo">promo</li>
-                <li class="nav__right--top-content_socialMedia">social</li>
-                <li class="nav__right--top-content_phone">+1(519)200-8736</li>
-                <li class="nav__right--top-content_search">Search</li>
+                <li class="nav__right--top-content_promo">
+                
+                <div class="svg__wrap">
+                <svg>
+                    <use xlink:href="/Assets/img/symbol-defs.svg#icon-colours"></use>
+                </svg>
+                </div>
+
+
+
+
+               
+
+                <span class="green-text">
+                    Promotions
+                </span>
+                </li>
+
+
+                <li class="nav__right--top-content_socialMedia">
+                   
+                <svg class="social__facebook">
+                        <use xlink:href="/Assets/img/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                    <svg class="social__instagram">
+                        <use xlink:href="/Assets/img/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                    <svg class="social__twitter">
+                        <use xlink:href="/Assets/img/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                     <svg class="social__linkedin2">
+                            <use xlink:href="/Assets/img/symbol-defs.svg#icon-linkedin2"></use>
+                    </svg>
+                    <svg class="social__tiktok">
+                        <use xlink:href="/Assets/img/symbol-defs.svg#icon-tiktok"></use>
+                    </svg>
+
+
+
+                </li>
+                <li class="nav__right--top-content_phone">+1 (519) 200-8736</li>
+                <li class="nav__right--top-content_search">
+
+                <svg class="social__search">
+                <use xlink:href="/Assets/img/symbol-defs.svg#icon-search"></use>
+                </svg>
+
+                
+                </li>
             </ul>
         </div>
 
