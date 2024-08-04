@@ -1,3 +1,11 @@
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 *,
 *::after,
 *::before {
@@ -42,10 +50,11 @@ body {
 .mainMenu .nav {
   display: flex;
   justify-content: start;
+  align-items: center;
   height: 100%;
 }
 .mainMenu .nav__left {
-  flex: 0 0 45%;
+  flex: 0 0 40%;
   height: inherit;
   display: flex;
   justify-content: start;
@@ -82,7 +91,7 @@ body {
   font-size: 2rem;
 }
 .mainMenu .nav__right {
-  flex: 0 0 55%;
+  flex: 0 0 60%;
   height: inherit;
   display: grid;
   grid-template-rows: min-content min-content;
@@ -107,8 +116,6 @@ body {
 .mainMenu .nav__right--top-content li {
   padding: 0.3rem 1rem 0 1rem;
   margin-right: 2rem;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
 }
 .mainMenu .nav__right--top-content li:nth-of-type(1) {
   display: flex;
@@ -136,7 +143,7 @@ body {
 .mainMenu .nav__right--top-content li:nth-of-type(1) > :nth-child(2) {
   font-family: Lato;
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: 2.1rem;
 }
 .mainMenu .nav__right--top-content li:nth-of-type(2) {
   display: flex;
@@ -150,25 +157,81 @@ body {
 .mainMenu .nav__right--top-content li:nth-of-type(3) {
   font-weight: bold;
   font-family: cursive;
-  font-size: 1.6rem;
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  position: relative;
+  right: 0.6rem;
+}
+@media only screen and (max-width: 80em) {
+  .mainMenu .nav__right--top-content li:nth-of-type(3) {
+    font-size: 1rem;
+  }
 }
 .mainMenu .nav__right--top-content > :last-child {
   text-align: center;
+  margin-right: 3rem;
+  cursor: pointer;
+  position: relative;
+  right: 1rem;
 }
 .mainMenu .nav__right--top-content > :last-child svg {
+  height: 2rem;
+  width: 2rem;
+}
+.mainMenu .nav__right--bottom .nav__right-list {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  padding: 0;
+}
+.mainMenu .nav__right--bottom .nav__right-list [class^=nav__right--item] {
+  padding: 0.2rem;
+  font-size: 1.55rem;
+  font-weight: 500;
+  font-family: Lato;
+  text-transform: uppercase;
+}
+.mainMenu .nav__right--bottom .nav__right-list [class^=nav__right--item] .item--arrow {
   height: 1.5rem;
   width: 1.5rem;
 }
-.mainMenu .nav__right--bottom-list {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  height: 100%;
-  width: 100%;
-  padding: 2rem 1rem 0.5rem 1rem;
+.mainMenu .nav__right--bottom .nav__right-list li {
+  margin-right: 3rem;
+  cursor: pointer;
+  padding: 1.5rem 0.1rem 1rem 0rem !important;
+}
+.mainMenu .nav__right--bottom .nav__right-list .popup {
+  position: absolute;
+  margin-top: 3rem;
+  display: none;
+}
+.mainMenu .nav__right--bottom .nav__right-list .popup--1 {
+  width: 25rem;
+  height: 40rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.mainMenu .nav__right--bottom .nav__right-list .popup--2 {
+  width: 10rem;
+  height: 40rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.mainMenu .nav__right--bottom .nav__right-list .popup--3 {
+  width: 11rem;
+  height: 40rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 0.1rem solid grey;
 }
 
+@keyframes popupAnimation {
+  0% {
+    margin-top: 3rem;
+    opacity: 0.5;
+  }
+  100% {
+    margin-top: 1rem;
+    opacity: 0.8;
+  }
+}
 .heroVideo {
   grid-row: navStart/videoEnd;
   grid-column: columnsStart/columnsEnd;
