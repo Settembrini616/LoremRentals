@@ -1,0 +1,127 @@
+
+    @include respond(large){
+
+        .nav{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: start;
+
+            &__left{
+
+               
+                position: absolute;
+                margin: 12rem;        
+                border: 18px solid transparent;
+                left: 2rem;
+                top: -8.8rem;
+                margin-left: 0;
+                display: flex;
+                justify-content: start;
+
+
+                &--wrapper{
+                    &-img{
+                    
+                        border: 15px solid transparent;
+                        position: relative;
+                        top: -.5rem;
+    
+                    }
+
+                  
+                    position: relative;
+                    left: -7rem;
+
+            
+
+                    &-bigText{
+                        font-size: 2rem !important; 
+                        position: relative;
+                        left: -1.5rem;
+                    }
+
+                    &-smallText{
+
+                        font-size: 2rem !important;
+                        position: relative;
+                        left: -1.5rem; 
+                    }
+
+
+
+                    
+           
+                    
+
+
+                }
+           
+
+            }
+
+            &__right{
+
+                position: relative;
+                width: 100%;
+           
+                
+
+          
+
+
+                &--top{
+                    >:first-child{
+                        display: none;
+                    }
+                   
+                    &-content{
+                        
+                        display: flex;
+                        justify-content: space-evenly !important;
+                    
+                        margin-right: auto;
+                        margin-left: auto;
+
+                        &_phone{
+                            font-size: 1.6rem !important;
+                        }
+
+                        &_search{
+
+                            height: 4.5rem;
+                            width: 10rem;
+                   
+
+                            svg{
+
+                                height: 4rem !important;
+                                width: 3rem !important;
+                        
+                            }
+                        }
+
+
+                      
+                    }
+                  
+                    height: 6rem;
+          
+                    
+                    
+                }
+
+                &--bottom{
+
+                  
+                    height: 6rem;
+                    display: flex;
+                    justify-content: end;
+
+
+                }
+            }
+        }
+       
+        }
+
+ 

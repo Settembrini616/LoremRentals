@@ -2,6 +2,7 @@
 @import './Base/mixins&vars';
 @import './Base/utilities/_utilities';
 @import './Base/base';
-@import './navbar';
-@import './firstVideo';
+@import './FirstPageScss/navbar';
+@import './FirstPageScss/navbarMixin';
+@import './FirstPageScss/_firstVideo';
 @import './Base/typography'; 

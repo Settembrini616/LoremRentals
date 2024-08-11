@@ -7,9 +7,10 @@ function initializeHeader() {
     if (mainMenu) {
         const navbarHTML = `
         <div class="nav">
-            <div class="nav__left">
+          
+        <div class="nav__left"> 
                 <div class="nav__left--wrapper">
-                    <img src="/Assets/img/LoremLogo.png" 
+                    <img src="/Assets/img/Building.png" 
                     alt="logo image" 
                     class="nav__left--wrapper-img">
     
@@ -23,7 +24,7 @@ function initializeHeader() {
                 </div>
             </div>
     
-            <div class="nav__right">
+            <div class="nav__right"> 
                 <div class="nav__right--top">
                     <div>&nbsp;</div>
                     <ul class="nav__right--top-content">
@@ -92,7 +93,7 @@ function initializeHeader() {
                 </div>
             </div>
     
-            <div class="nav-third">000</div>
+            
         </div>
         `;
 
@@ -105,7 +106,7 @@ function initializeHeader() {
 // Функция для добавления обработчиков событий на элементы
 function addPopUp() {
     const navItems = document.querySelectorAll('.nav__right-list li');
-    let hideTimer;
+    
 
     navItems.forEach(item => {
         const popup = item.querySelector('.popup');
