@@ -11,6 +11,10 @@
         align-items: center;
         height: 100%;
 
+      .shrink__wrap{
+        display: none;
+      }
+
         &__left{
 
             flex: 0 0 40%;
@@ -19,6 +23,7 @@
             display: flex;
             justify-content: start;
             align-items: center;
+        
             
 
             &--wrapper{
@@ -89,6 +94,12 @@
 
                 display: flex;
 
+                @include respond(largest){
+                    margin-bottom: .2rem;
+
+                }
+            
+        
                 >div:nth-of-type(1){
                     flex: 0 0 30%;
                 }
@@ -99,9 +110,8 @@
                     align-items: center;
                     justify-content: end;
                     list-style: none;
+                    
           
-               
-                  
 
                     >:nth-child(-n+2){
                         border-right: 2px solid grey;
@@ -110,7 +120,10 @@
                     li{
                         padding: .3rem 1rem 0 1rem;
                         
-                        margin-right: 2rem;   
+                        margin-right: 2rem;  
+                        min-height: 3rem;
+                        max-height: 3rem;
+                        
                     }
 
                     // li:not(:first-child){
@@ -124,6 +137,7 @@
                         gap: .4rem;
                         padding-top: .3rem;
                         margin-right: 0 !important;
+                        
                        
                         cursor: pointer; 
                         &:hover{
@@ -131,8 +145,6 @@
                                 transform: scale(1.4) rotate(-45deg);
                                 position: relative;
                                
-                               
-                                
                             
                             }
                         }
@@ -146,8 +158,8 @@
                             left: .2rem;
 
                             svg{
-                                height: 1.4rem;
-                                width: 1.4rem;
+                                height: 1.6rem;
+                                width: 1.6rem;
                              }
 
                         }
@@ -156,7 +168,8 @@
                             
                             font-family: Lato;
                             font-weight: bold;
-                            font-size: 2.1rem;
+                            font-size: 1.75rem;
+                            text-transform: uppercase;
 
                         }
 
@@ -183,15 +196,12 @@
                         font-weight: bold;
                         font-family: cursive;
                         flex-shrink: 0;
-                        font-size: 1.4rem;
+                        font-size: 2rem !important;
 
                         position: relative;
                         right: .6rem;
-                        @media only screen and (max-width:80em){
-                         font-size: 1rem;
-                        }
-
-                   
+                        bottom: .5rem;
+               
                         
                     }
 
@@ -224,7 +234,7 @@
                     [class^="nav__right--item"]{
                         padding: .2rem;
                         font-size: 1.55rem;
-                        font-weight: 500;
+                        font-weight: 600;
                         font-family: Lato;
                       
                         text-transform: uppercase;
@@ -232,6 +242,7 @@
                         .item--arrow{
                             height: 1.5rem;
                             width: 1.5rem;
+                            transition: all 0.3s ease-out;
                         }
                     }
 
@@ -239,7 +250,54 @@
                         margin-right: 3rem;
                         cursor: pointer; 
                         padding: 1.5rem .1rem 1rem 0rem !important;
+                        position: relative;
+                        
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            background-color: green;
+                            height: .1rem;
+                            width: 100%;
+                            bottom: 0rem;
+                            right: .2rem;
+                            opacity: 0;
+                            transition: height 0.3s ease-out;
+                            @include respond(large){
+                                bottom: -.5rem;
+                            }
+
+                        }
+
+                        
+
+                        &:hover::after {
+                           
+                            height: .5rem;
+                            opacity: 1;
+                        }
+
+                   
+                            
                     
+                        &:hover,
+                        &:hover + .popup,
+                        &:hover + .popup .item--arrow,
+                        &:active{
+                            background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            fill: green;
+                        }
+
+
+                        &:hover .popup{
+                            color: black !important;
+                        }
+
+                        &:hover .item--arrow{
+                            transform: translateY(.5rem);
+                        }
+
                         
                     }
 
@@ -248,24 +306,25 @@
                        position: absolute;
                        margin-top: 3rem;
                        display: none;
-                       
+                       width: 100%;
+                   
                        
                        
                        &--1{
-                        width: 25rem;
+                        
                         height: 40rem; ///TEMP
                         background-color: $color-menu;
 
                        }
 
                        &--2{
-                        width: 10rem;
+                        
                         height: 40rem; ///TEMP
                         background-color: $color-menu;
                        }
 
                        &--3{
-                        width: 11rem;
+                        
                         height: 40rem; ///TEMP
                         background-color: $color-menu;
                         border: .1rem solid grey;

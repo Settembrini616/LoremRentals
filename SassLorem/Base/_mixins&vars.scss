@@ -1,7 +1,7 @@
 
 $color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+$color-primary-light:  rgb(10, 232, 10);
+$color-primary-dark:  rgb(6, 72, 6);
 
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
@@ -20,6 +20,8 @@ $color-white: #fff;
 $color-black: #000;
 
 $color-menu: rgba(255, 255, 255, 0.6);
+$main-green: #1C9D48;
+$main-white: #e1e1e1;
 
 
 
@@ -31,15 +33,12 @@ $color-menu: rgba(255, 255, 255, 0.6);
 @mixin respond($breakpoint){
 
     @if $breakpoint == small {
-        @media only screen and (max-width: 37.5em){@content}
+        @media only screen and (max-width:  68em){@content}
     }
 
-    @if $breakpoint == medium {
-        @media only screen and (max-width: 56.25em){@content}
-    }
 
     @if $breakpoint == large{
-        @media only screen and (max-width:75em){@content}
+        @media only screen and (max-width:85em){@content}
     }
 
     @if $breakpoint == largest{

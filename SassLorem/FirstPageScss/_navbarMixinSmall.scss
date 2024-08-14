@@ -1,0 +1,149 @@
+@include respond(small){
+
+    .mainContainer{
+        display: grid;
+        grid-template-rows: [navStart] 9rem [navEnd videoStart]calc(100vh - 9rem) [videoEnd] !important;
+        grid-template-columns: [columnsStart] 1fr repeat(4, max-content) 1fr [columnsEnd];
+
+   }
+
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: end !important;
+        align-items: center;
+
+        .shrink__wrap{
+            display: flex !important;
+            align-items: center;
+         
+            width: 20%;    
+            height: 80%; 
+            justify-content: end;
+            gap: 2.2rem;
+            margin-right: 4rem;
+            
+               
+
+            .shrink__search {
+
+                &,
+                &:link,
+                &:visited{
+
+                    border: transparent;
+                    cursor: pointer;
+                    background-image: linear-gradient(to bottom, rgb(10, 232, 10), rgb(6, 72, 6));
+                    -webkit-background-clip: text;
+                    color: transparent;
+                  
+                }
+
+                .custom-search{
+                    font-variation-settings:
+                    'FILL' 0,
+                    'wght' 600,
+                    'GRAD' 0,
+                    'opsz' 24;
+
+                    font-size: 4rem;
+                }
+                
+                
+              }
+
+
+              .shrink__menu{
+
+                min-width: 7.5rem;
+                min-height: 7.5rem;
+                background-image: linear-gradient(to bottom, rgb(30, 191, 30), rgb(8, 158, 8));
+                border-radius: 6px;
+                cursor: pointer;
+                box-shadow: 1.5px 1.5px 0 rgba(83, 210, 9, 0.349);
+                border: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        
+              }
+
+              .shrink__inside{
+                position: relative;
+                &::before,
+                &::after{
+                    content: "";
+                    position: absolute;
+                   
+                }
+                
+                &,
+                &::before,
+                &::after {
+                  width: 5.5rem;
+                   height: .5rem;
+                    background-color: $main-white;
+                    border-radius: .5rem;
+                    transition: all .3s ease-in;
+                }
+
+                &::before{
+                    top: 1.8rem;
+                    right: 0rem;
+                }
+
+                &::after{
+                    
+                    bottom: 1.8rem;
+                    right: 0rem;
+                }
+
+              }
+
+
+
+              .menu-open .shrink__inside{
+
+                background-color: transparent;
+            
+                &::before{
+                    transform:rotate(45deg);
+                    top: 0;
+                    transition: all .3s ease-out;
+                  }
+    
+                  &::after{
+                    transform: rotate(-45deg);
+                    top: 0;
+                    transition: all .3s ease-out;
+                  }
+              }
+
+             
+
+
+
+          
+        }
+        
+        
+       
+        &__left{
+            display: none !important;
+        }
+
+        &__right{
+            display: none !important;
+        }
+       }
+       
+
+}
+ 
+       
+       
+
+
+

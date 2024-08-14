@@ -7,17 +7,31 @@ function initializeHeader() {
     if (mainMenu) {
         const navbarHTML = `
         <div class="nav">
+       
+        <div class="shrink__wrap">
+        <button class="shrink__search">
+        <span class="material-symbols-outlined custom-search">
+        search
+        </span>
+  
+
+         </button>
+         <button class="shrink__menu" id="menu-toggle">
+         <span class="shrink__inside">&nbsp;</span>
+          </button>
+            </div>
+
           
         <div class="nav__left"> 
                 <div class="nav__left--wrapper">
-                    <img src="/Assets/img/Building.png" 
+                    <img src="/Assets/img/newlogo.png" 
                     alt="logo image" 
                     class="nav__left--wrapper-img">
     
                     <p class="nav__left--wrapper-bigText">
                         Lorem Rentals Inc
                     </p>
-    
+
                     <p class="nav__left--wrapper-smallText">
                         Groups
                     </p>
@@ -100,6 +114,9 @@ function initializeHeader() {
         mainMenu.innerHTML = navbarHTML;
 
         addPopUp(); // Запуск функции для добавления попапов
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+            this.classList.toggle('menu-open');
+        })
     }
 }
 

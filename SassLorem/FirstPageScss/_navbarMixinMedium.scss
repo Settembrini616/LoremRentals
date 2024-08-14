@@ -1,6 +1,18 @@
 
     @include respond(large){
 
+        @keyframes popupAnimationSmall{
+            0%{
+                margin-top: 3.5rem;
+                opacity: 0.5;
+            }
+            100%{
+                margin-top: 1.5rem;
+                opacity:  .8;
+      
+            }
+        }
+
         .nav{
             display: flex;
             flex-direction: column-reverse;
@@ -22,7 +34,7 @@
                 &--wrapper{
                     &-img{
                     
-                        border: 15px solid transparent;
+                        border: 18px solid transparent;
                         position: relative;
                         top: -.5rem;
     
@@ -47,13 +59,6 @@
                         left: -1.5rem; 
                     }
 
-
-
-                    
-           
-                    
-
-
                 }
            
 
@@ -63,24 +68,35 @@
 
                 position: relative;
                 width: 100%;
-           
                 
-
-          
+                
 
 
                 &--top{
+
+
+                    display: flex;
+                    justify-content: end;
+                    background-color: $main-green;
+                  
+
                     >:first-child{
                         display: none;
                     }
                    
                     &-content{
                         
+                        color: $main-white;
                         display: flex;
-                        justify-content: space-evenly !important;
                     
-                        margin-right: auto;
-                        margin-left: auto;
+                        fill: $main-white;
+
+
+                        >:nth-child(-n+2){
+                            
+                            
+                        }
+                        
 
                         &_phone{
                             font-size: 1.6rem !important;
@@ -88,14 +104,14 @@
 
                         &_search{
 
-                            height: 4.5rem;
-                            width: 10rem;
+                            height: 2rem;
+                            width: 2rem;
                    
 
                             svg{
 
-                                height: 4rem !important;
-                                width: 3rem !important;
+                                height: 2rem !important;
+                                width: 2rem !important;
                         
                             }
                         }
@@ -111,12 +127,27 @@
                 }
 
                 &--bottom{
-
-                  
-                    height: 6rem;
+                    height:6rem;
+     
                     display: flex;
                     justify-content: end;
+                    align-items: center;
+          
+                
+                    
+           
 
+                    .nav__right-list{
+                        display: flex;
+                        align-content: start;
+                        padding: .2rem !important;
+
+                        .popup{
+                          animation: popupAnimationSmall 0.3s linear forwards !important;
+                      
+                        }
+                       
+                    }
 
                 }
             }
@@ -125,3 +156,4 @@
         }
 
  
+    
