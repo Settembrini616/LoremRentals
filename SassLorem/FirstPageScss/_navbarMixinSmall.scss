@@ -131,7 +131,42 @@
         
        
         &__left{
-            display: none !important;
+          
+            border: none;
+            margin-left: 6rem;
+            top: -12rem;
+
+            &--wrapper{
+                gap: .5rem;
+                &-img{
+                
+                    border: none;
+                    position: static;
+
+                }
+
+              
+                position: relative;
+                left: -7rem;
+
+        
+
+                &-bigText{
+                   
+                    position: static;
+                   
+                }
+
+                &-smallText{
+
+                  
+                    position: static;
+                    
+                }
+
+            }
+            
+
         }
 
         &__right{
@@ -144,6 +179,3 @@
  
        
        
-
-
-

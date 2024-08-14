@@ -13,8 +13,6 @@ function initializeHeader() {
         <span class="material-symbols-outlined custom-search">
         search
         </span>
-  
-
          </button>
          <button class="shrink__menu" id="menu-toggle">
          <span class="shrink__inside">&nbsp;</span>
@@ -29,7 +27,7 @@ function initializeHeader() {
                     class="nav__left--wrapper-img">
     
                     <p class="nav__left--wrapper-bigText">
-                        Lorem Rentals Inc
+                        Lorem Rental
                     </p>
 
                     <p class="nav__left--wrapper-smallText">
@@ -71,7 +69,11 @@ function initializeHeader() {
                                 <use xlink:href="/Assets/img/symbol-defs.svg#icon-tiktok"></use>
                             </svg>
                         </li>
-                        <li class="nav__right--top-content_phone">+1 (519) 200-8736</li>
+                        <li class="nav__right--top-content_phone">
+                        <span class="material-symbols-outlined phonecall">
+                        call
+                        </span>
+                        +1 (519) 200-8736</li>
                         <li class="nav__right--top-content_search">
                             <svg class="social__search">
                                 <use xlink:href="/Assets/img/symbol-defs.svg#icon-search"></use>

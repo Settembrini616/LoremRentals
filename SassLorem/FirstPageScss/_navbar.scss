@@ -160,6 +160,7 @@
                             svg{
                                 height: 1.6rem;
                                 width: 1.6rem;
+                                fill: $color-primary-dark;
                              }
 
                         }
@@ -170,6 +171,7 @@
                             font-weight: bold;
                             font-size: 1.75rem;
                             text-transform: uppercase;
+                            color: $color-primary-dark;
 
                         }
 
@@ -197,10 +199,24 @@
                         font-family: cursive;
                         flex-shrink: 0;
                         font-size: 2rem !important;
-
+                        color: $color-primary-dark;
                         position: relative;
                         right: .6rem;
                         bottom: .5rem;
+
+                        .phonecall{
+                            position: relative;
+                            top: .5rem;
+                            left: .2rem;
+
+                            font-variation-settings:
+                            'FILL' 0,
+                            'wght' 700,
+                            'GRAD' 0,
+                            'opsz' 24
+                        }
+
+
                
                         
                     }
@@ -212,8 +228,8 @@
                         position: relative;
                         right: 1rem;
                         svg{
-                            height: 2rem;
-                            width: 2rem;
+                            height: 2.2rem;
+                            width: 2.2rem;
                         }
                    
                     }
@@ -280,8 +296,7 @@
                             
                     
                         &:hover,
-                        &:hover + .popup,
-                        &:hover + .popup .item--arrow,
+                        &:hover .item--arrow,
                         &:active{
                             background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
                             -webkit-background-clip: text;

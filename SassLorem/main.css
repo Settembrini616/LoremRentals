@@ -148,12 +148,14 @@ body {
 .mainMenu .nav__right--top-content li:nth-of-type(1) > :first-child svg {
   height: 1.6rem;
   width: 1.6rem;
+  fill: rgb(6, 72, 6);
 }
 .mainMenu .nav__right--top-content li:nth-of-type(1) > :nth-child(2) {
   font-family: Lato;
   font-weight: bold;
   font-size: 1.75rem;
   text-transform: uppercase;
+  color: rgb(6, 72, 6);
 }
 .mainMenu .nav__right--top-content li:nth-of-type(2) {
   display: flex;
@@ -169,9 +171,16 @@ body {
   font-family: cursive;
   flex-shrink: 0;
   font-size: 2rem !important;
+  color: rgb(6, 72, 6);
   position: relative;
   right: 0.6rem;
   bottom: 0.5rem;
+}
+.mainMenu .nav__right--top-content li:nth-of-type(3) .phonecall {
+  position: relative;
+  top: 0.5rem;
+  left: 0.2rem;
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
 }
 .mainMenu .nav__right--top-content > :last-child {
   text-align: center;
@@ -181,8 +190,8 @@ body {
   right: 1rem;
 }
 .mainMenu .nav__right--top-content > :last-child svg {
-  height: 2rem;
-  width: 2rem;
+  height: 2.2rem;
+  width: 2.2rem;
 }
 .mainMenu .nav__right--bottom .nav__right-list {
   list-style: none;
@@ -228,7 +237,7 @@ body {
   height: 0.5rem;
   opacity: 1;
 }
-.mainMenu .nav__right--bottom .nav__right-list li:hover, .mainMenu .nav__right--bottom .nav__right-list li:hover + .popup, .mainMenu .nav__right--bottom .nav__right-list li:hover + .popup .item--arrow, .mainMenu .nav__right--bottom .nav__right-list li:active {
+.mainMenu .nav__right--bottom .nav__right-list li:hover, .mainMenu .nav__right--bottom .nav__right-list li:hover .item--arrow, .mainMenu .nav__right--bottom .nav__right-list li:active {
   background-image: linear-gradient(to bottom, rgb(10, 232, 10), rgb(6, 72, 6));
   -webkit-background-clip: text;
   color: transparent;
@@ -440,7 +449,24 @@ body {
     transition: all 0.3s ease-out;
   }
   .nav__left {
-    display: none !important;
+    border: none;
+    margin-left: 6rem;
+    top: -12rem;
+  }
+  .nav__left--wrapper {
+    gap: 0.5rem;
+    position: relative;
+    left: -7rem;
+  }
+  .nav__left--wrapper-img {
+    border: none;
+    position: static;
+  }
+  .nav__left--wrapper-bigText {
+    position: static;
+  }
+  .nav__left--wrapper-smallText {
+    position: static;
   }
   .nav__right {
     display: none !important;
