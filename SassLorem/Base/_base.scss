@@ -10,10 +10,12 @@
 html{
 
     font-size: 62.5%; ///1rem = 10px
-
+    @include respond(large){
+        font-size: 56.25%;
+    }
 
     @include respond(medium){
-        font-size: 56.25%;
+        font-size: 50.25%;
     }
     @include respond(small){
         font-size: 50%;
@@ -31,7 +33,7 @@ body{
 .mainContainer{
      display: grid;
      grid-template-rows: [navStart] 12rem [navEnd videoStart]calc(100vh - 12rem) [videoEnd];
-     grid-template-columns: [columnsStart] 1fr repeat(4, max-content) 1fr [columnsEnd];
+     grid-template-columns: [columnsStart] 1fr [columnLeftEnd centerStart] repeat(4, 20vw) [centerEnd columnRightStart] 1fr [columnsEnd];
 
 }
 

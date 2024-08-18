@@ -1,9 +1,11 @@
 
+@import './Base/fonts/fonts';
 @import './Base/mixins&vars';
 @import './Base/utilities/_utilities';
 @import './Base/base';
-@import './FirstPageScss/navbar';
-@import './FirstPageScss/navbarMixinMedium';
-@import './FirstPageScss/navbarMixinSmall';
-@import './FirstPageScss/_firstVideo';
+@import './FirstPageScss/Navbar/navbar';
+@import './FirstPageScss/Navbar/navbarMixinMedium';
+@import './FirstPageScss/Navbar/navbarMixinSmall';
+@import './FirstPageScss/Hero/firstVideo';
+@import './FirstPageScss/Hero/mainHeroBlock';
 @import './Base/typography'; 

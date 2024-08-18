@@ -120,16 +120,9 @@
                     transition: all .3s ease-out;
                   }
               }
-
-             
-
-
-
           
         }
         
-        
-       
         &__left{
           
             border: none;
@@ -149,18 +142,24 @@
                 position: relative;
                 left: -7rem;
 
-        
 
                 &-bigText{
                    
                     position: static;
+                    
+                    &>:nth-child(1){
+                        font-size: 4rem !important;
+                    }
+                    &>:nth-child(2){
+                        font-size: 3rem !important;
+                    }
                    
                 }
 
                 &-smallText{
-
-                  
+             
                     position: static;
+                    font-size: 2rem !important;
                     
                 }
 

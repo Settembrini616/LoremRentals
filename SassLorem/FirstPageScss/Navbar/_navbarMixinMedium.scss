@@ -32,31 +32,53 @@
 
 
                 &--wrapper{
+                    gap: 1.8rem !important;
+                    position: relative;
+                    left: -6rem;
+
                     &-img{
                     
                         border: 18px solid transparent;
                         position: relative;
-                        top: -.5rem;
+                        top: 0rem !important;
+                        right: -.8rem;
     
                     }
 
                   
-                    position: relative;
-                    left: -7rem;
-
-            
+                  
+              
 
                     &-bigText{
-                        font-size: 2rem !important; 
+                       
                         position: relative;
                         left: -1.5rem;
+                        top: -1rem;
+
+                          
+                    &>:nth-child(1){
+                        
+                        font-family: 'Eczar';
+                        font-size: 2.5rem !important;
+                        font-weight: 200;
+                        text-transform: uppercase;
+                        color: rgb(151, 110, 56);
+                    }
+
+                    &>:nth-child(2){
+                        font-size: 2.5rem !important;
+                    }
+
+
                     }
 
                     &-smallText{
 
-                        font-size: 2rem !important;
+                        font-size: 1.5rem !important;
                         position: relative;
-                        left: -1.5rem; 
+                        left: -1.5rem;
+                        top: -1rem;
+                        
                     }
 
                 }

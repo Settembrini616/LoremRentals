@@ -22,16 +22,16 @@ function initializeHeader() {
           
         <div class="nav__left"> 
                 <div class="nav__left--wrapper">
-                    <img src="/Assets/img/newlogo.png" 
+                    <img src="/Assets/img/City.png" 
                     alt="logo image" 
                     class="nav__left--wrapper-img">
     
                     <p class="nav__left--wrapper-bigText">
-                        Lorem Rental
+                    <span> Lorem</span><span> Rentals</span>
                     </p>
 
                     <p class="nav__left--wrapper-smallText">
-                        Groups
+                        Group
                     </p>
                 </div>
             </div>

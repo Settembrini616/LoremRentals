@@ -22,6 +22,8 @@ $color-black: #000;
 $color-menu: rgba(255, 255, 255, 0.6);
 $main-green: #1C9D48;
 $main-white: #e1e1e1;
+$border-color:#a3d03e;
+
 
 
 
@@ -31,6 +33,12 @@ $main-white: #e1e1e1;
 
 
 @mixin respond($breakpoint){
+
+
+    @if $breakpoint == smallest {
+        @media only screen and (max-width:  50em){@content}
+    }
+
 
     @if $breakpoint == small {
         @media only screen and (max-width:  68em){@content}
