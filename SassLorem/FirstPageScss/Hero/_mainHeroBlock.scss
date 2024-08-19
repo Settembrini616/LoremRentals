@@ -1,16 +1,24 @@
 .heroVideo{
     
-position: relative;
+
 
 
     .hero{
-        grid-column: centerStart/centerEnd;
 
-        position: absolute;
-        min-width: 60vw;
-        top: 40%;
-        left: 20%;
-        border: 10px solid orange;
+       max-width: 65vw;
+       position: relative;
+       z-index: 1000;
+       border: 2px solid red;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       
+
+       @include respond(small){
+        position: relative;
+        top: -5rem;
+        min-width: 80vw !important;
+       }
 
      
         &__topwrap{
@@ -19,6 +27,7 @@ position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             padding-bottom: 2rem;
             
 
@@ -35,11 +44,19 @@ position: relative;
                     font-size: 5rem !important;
                 }
 
+                
                 @include respond(small){
                     font-size: 4rem !important;
-                    position: relative;
-                    right: 10rem;
+                    padding-bottom: 0;
                 }
+
+                @include respond(smallest){
+                    font-size: 3.5rem !important;
+                 
+                }
+
+
+               
 
               
             }
@@ -49,15 +66,24 @@ position: relative;
                 font-weight: 400;
                 color: $main-white;
                 line-height: 4rem;
-           
+          
                 width: 50%;
                 display: flex;
                 justify-content: space-evenly;
+                border: 2px solid blue;
 
 
                 @include respond(large){
                     font-size: 3rem !important;
                 }
+
+                 
+                @include respond(smallest){
+                    padding: 0rem;
+                    width: 80%;
+                    justify-content: center;
+                }
+
             }
 
 
@@ -68,15 +94,58 @@ position: relative;
         
             display: flex;
             justify-content:start;
+            align-items: center;
             padding: 2rem;
             gap: 1.5rem;
+            border: 2px solid orange;
+
             @include respond(large){
-                font-size: 3rem !important;
+            
+                padding-top: 0 !important;
+
             }
+
+            @include respond(small){
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 75% 25%;
+            }
+
+            @include respond(smallest){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: start;
+
+                .search__container{
+                    width: 100% !important;
+                }
+
+                .selection__area{
+                    width: 100% !important;
+                }
+
+                
+            
+            }
+
+
+
+            // @include respond(small){
+            
+            //   display: grid;
+            //   grid-template-rows: 5rem 5rem;
+            // }
 
             
 
             .search__container{
+                grid-column: 1/2;
+
+                grid-column: 1/-1;
+                grid-row: 1/2;
+
+
                 flex: 0 0 40%;
          
                 display: flex;
@@ -88,6 +157,11 @@ position: relative;
                 font-size: 3rem;
                 color: rgba(22, 3, 3, 0.596);
                 border: 2px solid red;
+
+                @include respond(large){
+                    
+                    bottom: 3.5rem;
+                }
                 
                 }
 
@@ -131,18 +205,16 @@ position: relative;
 
                 }
 
+            
             }
 
             .selection__area{
 
+
                 flex: 0 0 40%;
-                border-radius: 50%;
                 display: flex;
-                justify-content: center;
-                gap: 0rem !important;
-
-
-
+                justify-content: center; 
+                gap: 0rem !important;    
                 
                 >label{
                     display: none;
@@ -151,20 +223,21 @@ position: relative;
                 .dropdown{
                     flex: 1;
                     text-transform: uppercase;
+                    
 
             
 
                     &__left{
                         border-bottom-left-radius: 1rem;
                         border-top-left-radius: 1rem;
-                        padding-left: 2rem;
+                        padding:1.8rem;
                         
 
                     }
                     &__right{
                         border-bottom-right-radius: 1rem;
                         border-top-right-radius: 1rem;
-                        padding-left: 2rem;
+                        padding: 1.8rem;
 
                     }
 
@@ -172,8 +245,6 @@ position: relative;
                 }
 
             }
-
-
 
             .button__wrapper{
 
@@ -183,7 +254,7 @@ position: relative;
                 align-items: center;
 
                 @include respond(small){
-                    border: 2px solid blue;
+         
                 }
 
                 .btn{
@@ -204,7 +275,7 @@ position: relative;
 
 
                     @include respond(small){
-                        border: 2px solid blue;
+                      
                     }
 
                     &:active{

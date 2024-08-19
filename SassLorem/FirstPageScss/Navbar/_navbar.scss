@@ -4,6 +4,8 @@
     grid-column: columnsStart/columnsEnd;
     z-index: 3;
     position: relative;
+    max-width: 100vw !important;
+
 
     .nav{
         display: flex;

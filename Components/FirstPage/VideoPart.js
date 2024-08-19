@@ -6,12 +6,9 @@ function initializeVideoPart(){
     if(videoSection){
 
         const videoHTML =`
+ 
+       
 
-        <video autoplay muted loop class="heroVideo__inner">
-        <source 
-        src="./Assets/videos/vecteezy_view-from-the-height-of-the-residential-area-near-the-river_39227544.mp4"
-         type="video/mp4">
-        </video>
        
  <div class="hero">
 
@@ -58,6 +55,12 @@ function initializeVideoPart(){
     </div> 
 </div>
 
+<video autoplay muted loop class="video__inner">
+<source 
+src="./Assets/videos/vecteezy_view-from-the-height-of-the-residential-area-near-the-river_39227544.mp4"
+ type="video/mp4">
+</video>
+
         `;
 
         videoSection.innerHTML = videoHTML;
@@ -66,3 +69,4 @@ function initializeVideoPart(){
 }
 
 widndow.initializeVideoPart = initializeVideoPart;
+
