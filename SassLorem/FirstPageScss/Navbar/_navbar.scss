@@ -33,13 +33,19 @@
                 width: 25%;
                 min-width: 20rem;
                 margin-left: 2rem;
-
                 display: grid;
                 grid-template-columns: min-content max-content;
                 grid-template-rows: 30% 30%;
                 justify-content: start;
                 align-content: center;
                 gap: 1.6rem;
+
+                @include respond(smallest){
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: static !important;
+                }
            
                 
 
@@ -53,6 +59,10 @@
                 position: relative;
                 top: 1.2rem;
 
+                @include respond(smallest){
+                    display: none;
+                }
+
                 }
 
 
@@ -63,6 +73,14 @@
                     text-align: end;
                     font-size: 3rem;
                     margin-top: 1rem;
+
+                    @include respond(smallest){
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: static !important;
+                    }
+               
                    
                     &>:nth-child(1){
                         
@@ -92,6 +110,10 @@
                     min-height: 2rem;
                     margin-top: 1rem;
                     font-size: 2rem;
+                    @include respond(smallest){
+                       display: none;
+                    }
+               
                    
                     
                 }

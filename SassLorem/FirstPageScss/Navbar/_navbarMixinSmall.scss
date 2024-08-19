@@ -129,19 +129,32 @@
             margin-left: 6rem;
             top: -12rem;
 
+            @include respond(smallest){
+               
+                margin-left: 1rem;
+            }
+
             &--wrapper{
                 gap: .5rem;
+                position: relative;
+                left: -7rem;
+
+               
+
+
+
                 &-img{
                 
                     border: none;
                     position: static;
 
+                   
+
+
                 }
 
               
-                position: relative;
-                left: -7rem;
-
+               
 
                 &-bigText{
                    
@@ -153,10 +166,19 @@
                     &>:nth-child(2){
                         font-size: 3rem !important;
                     }
+
+                    @include respond(smallest){
+                        grid-column: 1/-1 !important;
+                        grid-row: 1/2;
+                    }
+
                    
                 }
 
                 &-smallText{
+
+                    
+                   
              
                     position: static;
                     font-size: 2rem !important;

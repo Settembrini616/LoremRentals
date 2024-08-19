@@ -20,7 +20,7 @@ function initializeVideoPart(){
 
     
     <div class="hero__bottomwrap">
-        <div class="search__container">
+        <div class="search__container bottom-group">
             <span class="material-symbols-outlined custom-search">
                 search
             </span>
@@ -28,7 +28,7 @@ function initializeVideoPart(){
             placeholder="Start Your Journey Here...">
         </div>
 
-        <div class="selection__area">
+        <div class="selection__area bottom-group">
             <label for="dropdown-one">Dropdown 1</label>
             <select class="dropdown dropdown__left" id="dropdown-one" name="options-one">
             <option value="" disabled selected class="optiontext optiontext-one">select a city</option>     
@@ -47,11 +47,11 @@ function initializeVideoPart(){
                 <option value="option4">Option 4</option>
             </select>
         </div>
-        <div class="button__wrapper">
-        <button class="btn green">
+        
+        <button class="btn green bottom-group">
             Search 
         </button>
-        </div>
+       
     </div> 
 </div>
 

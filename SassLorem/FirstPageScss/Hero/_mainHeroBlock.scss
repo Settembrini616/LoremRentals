@@ -5,10 +5,10 @@
 
     .hero{
 
-       max-width: 65vw;
+       min-width: 65vw;
        position: relative;
        z-index: 1000;
-       border: 2px solid red;
+     
        display: flex;
        justify-content: center;
        flex-direction: column;
@@ -37,11 +37,12 @@
             letter-spacing: .2rem;
                 font-weight: 700;
                 color: $main-white;
-                padding-bottom: 2rem;
+            
                 line-height: 8rem;
 
                 @include respond(large){
                     font-size: 5rem !important;
+                    padding-bottom: .5rem;
                 }
 
                 
@@ -65,13 +66,13 @@
                 font-size: 3rem;
                 font-weight: 400;
                 color: $main-white;
-                line-height: 4rem;
+                
+    
           
                 width: 50%;
                 display: flex;
                 justify-content: space-evenly;
-                border: 2px solid blue;
-
+        
 
                 @include respond(large){
                     font-size: 3rem !important;
@@ -95,17 +96,20 @@
             display: flex;
             justify-content:start;
             align-items: center;
-            padding: 2rem;
+            padding: 0rem;
             gap: 1.5rem;
-            border: 2px solid orange;
+      
+            
+         
 
             @include respond(large){
             
-                padding-top: 0 !important;
+                padding-top: 0rem !important;
 
             }
 
             @include respond(small){
+                padding: 0 !important;
                 display: grid;
                 grid-template-rows: 1fr 1fr;
                 grid-template-columns: 75% 25%;
@@ -128,47 +132,58 @@
                 
             
             }
-
-
-
-            // @include respond(small){
-            
-            //   display: grid;
-            //   grid-template-rows: 5rem 5rem;
-            // }
-
             
 
             .search__container{
-                grid-column: 1/2;
-
-                grid-column: 1/-1;
-                grid-row: 1/2;
-
-
-                flex: 0 0 40%;
          
+                grid-row: 1/2;
+                flex: 0 0 40%;
                 display: flex;
+                max-width: 100% !important;
+
+                @include respond(small){
+                 
+                    grid-column: 1/-1;
+                    grid-row: 1/2;
+           
+                }
+                
+
+
                 
                 .custom-search{
                 position: absolute;
-                left: 3rem;
-                bottom: 3.2rem;
+                left: .5rem;
+                bottom: 1rem;
                 font-size: 3rem;
                 color: rgba(22, 3, 3, 0.596);
-                border: 2px solid red;
+               
 
                 @include respond(large){
                     
-                    bottom: 3.5rem;
+                    bottom: 1rem;
                 }
-                
+
+                @include respond(small){
+                 
+                    bottom: 8rem;
+                    left: 1rem;
+                }
+
+                @include respond(smallest){
+                    bottom: 14.5rem;
+                    left: .6rem;
+                }
+
+
+           
                 }
 
                 
                .custom-search--input{     
                 width: 100%;
-                padding:  1.8rem 2rem 1.8rem 4.2rem;
+                padding:  1.5rem;
+                padding-left: 3.5rem !important;
                 border-radius: 1rem;
                 overflow: hidden;
                 line-height: 1rem !important;
@@ -177,6 +192,7 @@
                 color: rgba(128, 128, 128, 0.304);
                 border: 1.5px solid $border-color;
                 color: rgba(4, 32, 4, 0.72);
+                overflow: clip !important;
 
                 &::placeholder {
                     color: rgba(128, 128, 128, 0.6);
@@ -230,14 +246,14 @@
                     &__left{
                         border-bottom-left-radius: 1rem;
                         border-top-left-radius: 1rem;
-                        padding:1.8rem;
+                        padding:1rem;
                         
 
                     }
                     &__right{
                         border-bottom-right-radius: 1rem;
                         border-top-right-radius: 1rem;
-                        padding: 1.8rem;
+                        padding: 1.5rem;
 
                     }
 
@@ -246,24 +262,14 @@
 
             }
 
-            .button__wrapper{
-
-                flex: 0 0 10%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                @include respond(small){
          
-                }
-
                 .btn{
 
                     background-color: $main-green;
-                    padding: 1.8rem 6rem 1.8rem 6rem;
+                    padding: 1.2rem 4rem 1.2rem 4rem;
                     border-radius: 8px;
                     border: none;
-                    line-height:2rem;
+                    font-size: 2rem;
                     font: 'Monserrat';
                     color: $main-white;
                     text-transform: uppercase;
@@ -275,7 +281,11 @@
 
 
                     @include respond(small){
-                      
+                        padding: 1.5rem 6rem 1.5rem 6rem;
+                    }
+
+                    @include respond(smallest){
+                        
                     }
 
                     &:active{
@@ -286,7 +296,7 @@
                 }
 
 
-            }
+            
 
 
         }
@@ -299,7 +309,7 @@
 
 input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
     overflow-clip-margin: 0px !important;
-    overflow: clip !important;
+   
     word-break: break-all;
 
 }
