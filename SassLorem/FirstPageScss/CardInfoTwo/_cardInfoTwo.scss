@@ -1,0 +1,44 @@
+.cardInfoTwo{
+
+    grid-row: cardTwoStart/cardTwoEnd;
+    grid-column: columnsStart/columnsEnd;
+
+    margin-top: 0 !important;
+    background: linear-gradient(to bottom, $color-white 0%, $color-white 25%,
+     $color-menu 25%, $color-menu 100%);
+
+
+     .partTwoTop{
+        height: 50%;
+        border: 5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include respond(small){
+
+         flex-direction: column;
+         height: 100vh;
+        }
+   
+       
+
+       
+
+        .card{
+
+         border: 2px solid blue !important;
+      
+        }
+
+     }
+
+     .partTwoBottom{
+        height: 50%;
+    
+     }
+
+
+
+}

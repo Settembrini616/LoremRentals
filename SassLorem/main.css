@@ -67,7 +67,7 @@ body {
 
 .mainContainer {
   display: grid;
-  grid-template-rows: [navStart] 12rem [navEnd videoStart] calc(100vh - 12rem) [videoEnd];
+  grid-template-rows: [navStart] 12rem [navEnd videoStart] calc(100vh - 12rem) [videoEnd cardTwoStart] 100vh [cardTwoEnd];
   grid-template-columns: [columnsStart] 1fr [columnLeftEnd centerStart] repeat(4, 20vw) [centerEnd columnRightStart] 1fr [columnsEnd];
 }
 
@@ -832,4 +832,31 @@ body {
 input:not([type=image i], [type=range i], [type=checkbox i], [type=radio i]) {
   overflow-clip-margin: 0px !important;
   word-break: break-all;
+}
+
+.cardInfoTwo {
+  grid-row: cardTwoStart/cardTwoEnd;
+  grid-column: columnsStart/columnsEnd;
+  margin-top: 0 !important;
+  background: linear-gradient(to bottom, #fff 0%, #fff 25%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0.6) 100%);
+}
+.cardInfoTwo .partTwoTop {
+  height: 50%;
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 68em) {
+  .cardInfoTwo .partTwoTop {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+.cardInfoTwo .partTwoTop .card {
+  border: 2px solid blue !important;
+}
+.cardInfoTwo .partTwoBottom {
+  height: 50%;
 }/*# sourceMappingURL=main.css.map */

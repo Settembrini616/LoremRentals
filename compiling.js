@@ -3,6 +3,7 @@
 const scripts = [
     './Components/FirstPage/Header.js',
     '/Components/FirstPage/VideoPart.js',
+    '/Components/FirstPage/CardInfoTwo.js',
 ]
 
 
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Вызов всех функций инициализации компонентов
             if (typeof initializeHeader === 'function') initializeHeader();
             if (typeof initializeVideoPart === 'function') initializeVideoPart();
+            if (typeof initializeCardInfo === 'function') initializeCardInfo();
         })
         .catch(err => console.error(err));
 });
