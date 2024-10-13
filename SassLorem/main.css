@@ -67,7 +67,7 @@ body {
 
 .mainContainer {
   display: grid;
-  grid-template-rows: [navStart] 12rem [navEnd videoStart] calc(100vh - 12rem) [videoEnd cardTwoStart] 100vh [cardTwoEnd];
+  grid-template-rows: [navStart] 12rem [navEnd videoStart] calc(100vh - 12rem) [videoEnd cardTwoStart] calc(100vh + 12rem) [cardTwoEnd];
   grid-template-columns: [columnsStart] 1fr [columnLeftEnd centerStart] repeat(4, 20vw) [centerEnd columnRightStart] 1fr [columnsEnd];
 }
 
@@ -589,8 +589,6 @@ body {
 .heroVideo {
   grid-row: navStart/videoEnd;
   grid-column: columnsStart/columnEnd;
-  padding-top: 12rem;
-  border: 40px sold yellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -841,12 +839,35 @@ input:not([type=image i], [type=range i], [type=checkbox i], [type=radio i]) {
   background: linear-gradient(to bottom, #fff 0%, #fff 25%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0.6) 100%);
 }
 .cardInfoTwo .partTwoTop {
-  height: 50%;
-  border: 5px solid black;
+  height: 53%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 4rem;
+}
+.cardInfoTwo .partTwoTop .card-info {
+  border: none !important;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.cardInfoTwo .partTwoTop .card-info:nth-child(1) {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(34, 34, 34, 0.2)), url("/Assets/img/Truba.jpg");
+  background-size: cover;
+  background-position: center -60px;
+  background-repeat: no-repeat;
+}
+.cardInfoTwo .partTwoTop .card-info:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(34, 34, 34, 0.15)), url("/Assets/img/Marriage.jpg");
+  background-size: cover;
+  background-position: center 0px;
+  background-repeat: no-repeat;
+}
+.cardInfoTwo .partTwoTop .card-info:nth-child(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(34, 34, 34, 0.15)), url("/Assets/img/Soviet_aesthetic_houses.jpg");
+  background-size: cover;
+  background-position: center -20px;
+  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 68em) {
   .cardInfoTwo .partTwoTop {
@@ -854,9 +875,6 @@ input:not([type=image i], [type=range i], [type=checkbox i], [type=radio i]) {
     height: 100vh;
   }
 }
-.cardInfoTwo .partTwoTop .card {
-  border: 2px solid blue !important;
-}
 .cardInfoTwo .partTwoBottom {
-  height: 50%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */

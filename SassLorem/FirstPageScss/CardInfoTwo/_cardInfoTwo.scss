@@ -9,33 +9,67 @@
 
 
      .partTwoTop{
-        height: 50%;
-        border: 5px solid black;
+        height: 53%;
+      //   border: 5px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        gap: 4rem;
+
+   
+   
+        .card-info{
+         border: none !important;
+         border-radius: 1rem;
+         cursor: pointer;
+
+         &:nth-child(1){
+            // background: linear-gradient(rgba(112, 66, 20, 0.25), rgba(255, 206, 150, 0.25)),
+            //  url('/Assets/img/Bars_Building.jpg');
+            // background-size: cover;
+            // background-position: center; 
+            // background-repeat: no-repeat;
+
+            // @include background-cover('/Assets/img/Truba.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(34, 34, 34, 0.2)), 
+            url('/Assets/img/Truba.jpg');
+            background-size: cover;
+            background-position: center -60px;
+            background-repeat: no-repeat;
+         }
+
+
+         &:nth-child(2){
+         
+            // @include background-cover('/Assets/img/Marriage.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(34, 34, 34, 0.15)), 
+            url('/Assets/img/Marriage.jpg');
+            @include background-periferals();
+         }
+         &:nth-child(3){
+           
+            background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(34, 34, 34, 0.15)), 
+                url('/Assets/img/Soviet_aesthetic_houses.jpg');
+                @include background-periferals(-20px);
+         }
+        }
+
+       
+
+
+
 
         @include respond(small){
 
          flex-direction: column;
-         height: 100vh;
-        }
-   
-       
-
-       
-
-        .card{
-
-         border: 2px solid blue !important;
-      
+         height: calc(100vh );
         }
 
      }
 
      .partTwoBottom{
-        height: 50%;
+        height: 100%;
     
      }
 

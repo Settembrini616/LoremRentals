@@ -57,3 +57,11 @@ $cardTwoBg:#ffffff;
 
 
 }
+
+
+@mixin background-periferals($offestY:0px)
+{
+    background-size: cover;
+    background-position: center #{$offestY};
+    background-repeat: no-repeat;
+}

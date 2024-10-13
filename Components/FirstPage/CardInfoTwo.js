@@ -1,9 +1,11 @@
+
+
 function initializeCardInfo() {
     const cardInfoTwo = document.querySelector('.cardInfoTwo');
 
     if (cardInfoTwo) {
 
-        const cardTemplate = new CardGeneral('card',20,20);
+        const cardTemplate = new CardGeneral('card-info',50,40);
         const cardsMarkup = addCards(cardTemplate, 3);
 
         const cardInfoContent = `
@@ -26,9 +28,16 @@ document.addEventListener('DOMContentLoaded', initializeCardInfo);
 
 
 
+// const arrayOfCards = [
+//     new CardGeneral('card', 8, 8),
+//     new CardGeneral('card', 8, 8),
+//     new CardGeneral('card', 8, 8)
+// ]
 
 class CardGeneral {
-    constructor(className, width, height, border='2px solid black'){
+    constructor(className, width, height, border='2px solid black'
+
+    ){
         this.className = className;
         this.width = width;
         this.height = height;
@@ -47,6 +56,15 @@ class CardGeneral {
 
     }
 
+    populateHtml(htmlContent){
+        const existingCard = document.querySelector(`.${this.className}`);
+
+        if(existingCard)
+        {
+            existingCard.innerHTML = htmlContent;
+        }
+    }
+
 }
 
 const addCards = ( cardInstance, count) =>{
@@ -59,15 +77,6 @@ const addCards = ( cardInstance, count) =>{
     return cardsHtml;
 
 }
-
-// const arrayOfCards = [
-//     new CardGeneral('card', 8, 8),
-//     new CardGeneral('card', 8, 8),
-//     new CardGeneral('card', 8, 8)
-// ]
-
-
-
 
 
 
