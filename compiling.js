@@ -1,9 +1,11 @@
 'use strict'
 
 const scripts = [
+    '/Classes/CardGeneral.js',
     './Components/FirstPage/Header.js',
     '/Components/FirstPage/VideoPart.js',
     '/Components/FirstPage/CardInfoTwo.js',
+   
 ]
 
 
@@ -20,8 +22,8 @@ function loadScript(src) {
     });
 }
 
-function loadScripts(scripts) {
-    return Promise.all(scripts.map(loadScript));
+function loadScripts(scriptsVar) {
+    return Promise.all(scriptsVar.map(loadScript));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (typeof initializeHeader === 'function') initializeHeader();
             if (typeof initializeVideoPart === 'function') initializeVideoPart();
             if (typeof initializeCardInfo === 'function') initializeCardInfo();
+           
         })
         .catch(err => console.error(err));
 });
