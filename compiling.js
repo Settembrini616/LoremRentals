@@ -1,6 +1,7 @@
 'use strict'
 
 const scripts = [
+    '/Classes/CardGeneral.js',
     './Components/FirstPage/Header.js',
     '/Components/FirstPage/VideoPart.js',
     '/Components/FirstPage/CardInfoTwo.js',

@@ -1,13 +1,12 @@
 'use strict'
 
-export class CardGeneral {
-    constructor(className, width, height, border='2px solid black'
-
-    ){
+ class CardGeneral {
+    constructor(className, width, height)
+    {
         this.className = className;
         this.width = width;
         this.height = height;
-        this.border = border;
+    
     }
 
     createCard(){
@@ -16,19 +15,45 @@ export class CardGeneral {
         card.className = this.className;
         card.style.width = this.width + 'rem';
         card.style.height = this.height + 'rem';
-        card.style.border = this.border;
-
+    
+        document.body.appendChild(card);
+    
         return card;
 
     }
 
-    populateHtml(htmlContent){
-        const existingCard = document.querySelector(`.${this.className}`);
 
-        if(existingCard)
-        {
-            existingCard.innerHTML = htmlContent;
+}
+
+
+class SecondFieldCard extends CardGeneral{
+    constructor(className, width, height, htmlContentInit, newHtmlContentHover)
+    {
+        super(className, width, height, htmlContentInit);
+        this.newHtmlContentHover = newHtmlContentHover;
+
+    }
+
+    changeHtmlOnHover()
+    {
+        const card = document.querySelector(`.${this.className}`);
+
+        if(card){
+        
+            card.addEventListener('mouseenter', ()=>{
+                card.innerHTML = this.newHtmlContentHover;
+            });
+
+            card.addEventListener('mouseleave', ()=>{
+                card.innerHTML = this.htmlContentInit;
+            })
+
         }
     }
 
+
+
+
+
 }
+ 
